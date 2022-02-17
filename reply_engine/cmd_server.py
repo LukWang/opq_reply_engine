@@ -14,11 +14,10 @@ from .cmd_dbi import cmdDB, cmdInfo, replyInfo, CMD_TYPE
 from .exceptions import *
 from .common_parser import common_group_parser, commonContext, picObj
 from .__version__ import check_version
-from .config import replyConfig
+from .config import g_config
 
-# 全局初始化配置，失败的话抛出异常
+# 数据库更新，失败的话抛出异常
 check_version()
-g_config = replyConfig()
 
 g_user_cache = {}
 g_group_cache = {}
